@@ -1,12 +1,12 @@
-# 0. None
+#  0. None
 
 The project refers to https://github.com/lizhengwei1992/Semantic_Human_Matting.
 
 Finally, I converted the pytorch model to the openvino model, and run it on cpu.
 
-# 1. My Environment: 
+#  1. My Environment: 
 
-## for python:
+##  for python:
 
 python == 3.6.5
 
@@ -16,13 +16,13 @@ torchvision == 0.4.0
 
 cv2 == 4.1.2
 
-## for C++:
+##  for C++:
     
 openvino == 2019.3.334
 
 opencv == 4.1.2
 
-# 2. Prepare train dataset
+#  2. Prepare train dataset
 
 Download alpha images from: https://pan.baidu.com/s/1KfPgNQxpcxtWOnK-N6-TqA (t48e)
 
@@ -36,7 +36,7 @@ Unzip alpha to data folder and execute:
 
 (3) generate train.txt: python gen_train_data_list.py
 
-# 3. Train
+#  3. Train
 
 I set patch_size = 256, train_batch = 32.
 
@@ -48,11 +48,11 @@ python train.py --finetuning False --lr 1e-3 --nEpochs 100 --train_phase
 
 python train.py --finetuning True --lr 1e-4 --nEpochs 200 --train_phase end_to_end
 
-# 4. Test
+#  4. Test
 
 Put images into images folder and run python test_image.py.
 
-# 5. OpenVINO
+#  5. OpenVINO
 
 (1) Convert model_obj.pth to model_obj.onnx: python torch_to_onnx.py
 
@@ -62,7 +62,7 @@ python mo_onnx.py --input_shape=[1,3,256,256] --mean_values [104.0,112.0,121
 ```
 Alter that, we have two files: model_obj.xml(model information file) and model_obj.bin(weights file).
 
-# 6. Qt
+#  6. Qt
 
 Build Kit: Desktop Qt 5.12.0 MSVC2015 64bit, Release.
 
