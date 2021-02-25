@@ -24,9 +24,9 @@ opencv == 4.1.2
 
 #  2. Prepare train dataset
 
-Download alpha images from: https://pan.baidu.com/s/1KfPgNQxpcxtWOnK-N6-TqA (t48e)
+Download alpha images from: https://pan.baidu.com/s/1geFwrv7H3moFc9nxXwQJ1g    (boy2)
 
-Download init images and mask images from: https://pan.baidu.com/s/1R9PJJRT-KjSxh-2-3wCGxQ (dzsn)
+Download init images and mask images from: https://pan.baidu.com/s/1R9PJJRT-KjSxh-2-3wCGxQ    (dzsn)
 
 Unzip alpha to data folder and execute:
 
